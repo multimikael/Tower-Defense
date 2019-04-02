@@ -6,6 +6,7 @@ onready var start_pos = get_node("start_pos").get_position()
 onready var end_pos = get_node("end_pos").get_position()
 onready var nav = get_node("nav")
 onready var map = get_node("nav/map")
+onready var tower_map = get_node("tower_map")
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
