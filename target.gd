@@ -18,7 +18,7 @@ func update_path():
 	path = nav.get_simple_path(get_position(), goal, false)
 
 func _physics_process(delta):
-	print(path)
+	#print(path)
 	if path.size() > 1:
 		var d = get_position().distance_to(path[0])
 		if d > 2:

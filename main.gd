@@ -19,8 +19,7 @@ func _on_target_timer_timeout():
 	t.set_position(start_pos)
 	t.goal = end_pos
 	t.nav = nav
-	
-	
+
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
