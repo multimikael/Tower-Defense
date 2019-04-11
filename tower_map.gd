@@ -2,7 +2,7 @@ extends TileMap
 
 signal new_tower(type)
 
-var towers = [] # Array for towers as dictonaries with fields: type, coord
+var towers = [] # Array for towers as dictonaries with fields: type, coord, timer
 
 func _ready():
 	connect("new_tower", self, "_on_new_tower")
