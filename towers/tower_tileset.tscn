@@ -1,13 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://towers/tower1.png" type="Texture" id=1]
+[ext_resource path="res://towers/TOWER1.png" type="Texture" id=1]
 
-[node name="tower_tileset" type="Node2D" index="0"]
+[node name="tower_tileset" type="Node2D"]
 
-[node name="tower1" type="Sprite" parent="." index="0"]
-
+[node name="tower1" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 centered = false
-_sections_unfolded = [ "Offset", "Region" ]
-
 
