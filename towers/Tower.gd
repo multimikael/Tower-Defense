@@ -2,19 +2,15 @@ extends Node2D
 
 const FORBIDDEN_TILE = 1
 
-var type
-var is_ghost
+var type setget set_type, get_type
+var is_ghost setget set_is_ghost, get_is_ghost
 var sprite
 
 onready var main = get_node("/root/main")
 onready var map = get_node("/root/main/nav/map")
 
-func _init(type, is_ghost, pos):
-	self.type = type
-	self.is_ghost = is_ghost
-	self.set_position(pos)
-	self.sprite = Sprite.new()
-	add_child(sprite)
+func _init():
+	pass
 
 func _input(event):
 	if is_ghost:
@@ -30,3 +26,15 @@ func _input(event):
 					self.queue_free()
 			elif event.button_index == BUTTON_RIGHT:
 				self.queue_free()
+
+func set_type(t):
+	type = t
+
+func get_type():
+	return type
+
+func set_is_ghost(b):
+	is_ghost = b
+
+func get_is_ghost():
+	return is_ghost

@@ -4,9 +4,6 @@ var cooldown
 var timer
 var Bullet
 
-func _init(type, is_ghost, pos).(type, is_ghost, pos):
-	pass
-
 func _ready():
 	if !is_ghost:
 		timer = Timer.new()

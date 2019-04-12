@@ -1,7 +1,7 @@
 extends Node2D
 
 var target = preload("res://target/target.tscn")
-var Tower1 = preload("res://towers/Tower1.gd")
+var Tower1 = preload("res://towers/Tower1.tscn")
 
 signal new_tower(type, is_ghost, pos)
 
@@ -28,7 +28,10 @@ func _on_target_timer_timeout():
 func _on_new_tower(type, is_ghost, pos):
 	match type:
 		"TOWER1":
-			var t = Tower1.new(is_ghost, pos)
+			var t = Tower1.instance()
+			t.set_is_ghost(is_ghost)
+			t.set_type(type)
+			t.set_position(pos)
 			towers.append(t)
 			add_child(t)
 
