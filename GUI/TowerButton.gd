@@ -7,4 +7,4 @@ func _ready():
 
 func _on_TextureButton_pressed():
 	print("Clicked " + self.name)
-	main.emit_signal("new_ghost_tower", self.name)
+	main.emit_signal("new_tower", self.name, true, get_viewport().get_mouse_position())
