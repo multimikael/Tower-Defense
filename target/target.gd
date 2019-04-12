@@ -1,4 +1,4 @@
-extends Sprite
+extends Node2D
 
 var speed = 150
 var nav = null setget set_nav

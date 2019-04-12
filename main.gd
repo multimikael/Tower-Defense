@@ -1,6 +1,6 @@
 extends Node2D
 
-var target = preload("res://target.tscn")
+var target = preload("res://target/target.tscn")
 var Tower1 = preload("res://towers/Tower1.gd")
 
 signal new_tower(type, is_ghost, pos)
