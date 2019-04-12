@@ -1,6 +1,5 @@
 extends Node2D
 
-onready var sprite = get_node("Bullet/sprite")
 var start_pos setget set_start_pos, get_start_pos
 var dir_vec setget set_dir_vec, get_dir_vec
 var speed

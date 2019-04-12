@@ -4,7 +4,6 @@ const FORBIDDEN_TILE = 1
 
 var type setget set_type, get_type
 var is_ghost setget set_is_ghost, get_is_ghost
-var sprite
 
 onready var main = get_node("/root/main")
 onready var map = get_node("/root/main/nav/map")
