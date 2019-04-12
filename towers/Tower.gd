@@ -12,8 +12,8 @@ onready var map = get_node("/root/main/nav/map")
 func _init(type, is_ghost, pos):
 	self.type = type
 	self.is_ghost = is_ghost
-	self.sprite = Sprite.new()
 	self.set_position(pos)
+	self.sprite = Sprite.new()
 	add_child(sprite)
 
 func _input(event):

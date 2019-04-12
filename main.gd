@@ -19,6 +19,7 @@ func _ready():
 	
 func _on_target_timer_timeout():
 	var t = target.instance()
+	targets.append(t)
 	add_child(t)
 	t.set_position(start_pos)
 	t.goal = end_pos
@@ -27,7 +28,9 @@ func _on_target_timer_timeout():
 func _on_new_tower(type, is_ghost, pos):
 	match type:
 		"TOWER1":
-			add_child(Tower1.new(is_ghost, pos))
+			var t = Tower1.new(is_ghost, pos)
+			towers.append(t)
+			add_child(t)
 
 func set_targets(ts):
 	targets = ts
