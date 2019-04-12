@@ -3,7 +3,6 @@ extends Node2D
 const FORBIDDEN_TILE = 1
 
 var type
-var timer
 var is_ghost
 var sprite
 
