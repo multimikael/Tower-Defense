@@ -25,3 +25,6 @@ func _physics_process(delta):
 			set_position(get_position().linear_interpolate(path[0], (speed * delta)/d))
 		else:
 			path.remove(0)
+
+func _on_TargetArea_area_entered(area):
+	queue_free()

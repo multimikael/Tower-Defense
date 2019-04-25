@@ -10,6 +10,7 @@ onready var end_pos = get_node("end_pos").get_position()
 onready var nav = get_node("nav")
 onready var map = get_node("nav/map")
 
+#TODO: Change targets to group
 var targets = [] setget set_targets, get_targets
 var towers = [] setget set_towers, get_towers
 
