@@ -13,7 +13,7 @@ func _ready():
 	
 func _on_timer_timeout():
 	# Find nearest target
-	var targets = main.get_targets()
+	var targets = get_tree().get_nodes_in_group("targets")
 	if targets.size() > 0:
 		var near_pos = null
 		for t in targets:
