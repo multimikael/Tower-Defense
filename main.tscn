@@ -26,5 +26,4 @@ position = Vector2( 1088, 896 )
 autostart = true
 
 [node name="GUI" parent="." instance=ExtResource( 3 )]
-
 [connection signal="timeout" from="target_timer" to="." method="_on_target_timer_timeout"]
