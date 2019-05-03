@@ -3,6 +3,7 @@ extends "Tower.gd"
 var cooldown
 var timer
 var Bullet
+var bullet_offset = Vector2(0,0)
 
 func _ready():
 	if !is_ghost:
@@ -21,6 +22,7 @@ func _on_timer_timeout():
 				near_pos = t.get_global_position()
 		var dir_vec = Vector2(near_pos.x - global_position.x, near_pos.y - global_position.y).normalized()
 		var b = Bullet.instance()
+		b.set_position(b.get_global_position()+bullet_offset)
 		b.set_start_pos(global_position)
 		b.set_dir_vec(dir_vec)
 		add_child(b)

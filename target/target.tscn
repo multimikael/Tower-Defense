@@ -17,5 +17,4 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetArea"]
 shape = SubResource( 1 )
-
 [connection signal="area_entered" from="TargetArea" to="." method="_on_TargetArea_area_entered"]
