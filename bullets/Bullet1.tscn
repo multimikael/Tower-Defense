@@ -4,7 +4,7 @@
 [ext_resource path="res://bullets/bullet1.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 6.62356
+radius = 8.5739
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -16,5 +16,4 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BulletArea"]
 shape = SubResource( 1 )
-
 [connection signal="area_entered" from="BulletArea" to="." method="_on_BulletArea_area_entered"]
