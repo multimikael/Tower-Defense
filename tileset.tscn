@@ -1,103 +1,100 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://tileset/grasstileset.png" type="Texture" id=1]
-[ext_resource path="res://tileset/grasstilecorner.png" type="Texture" id=2]
+[ext_resource path="res://tileset/enemy_path_tileset.png" type="Texture" id=1]
+[ext_resource path="res://tileset/grasstileset.png" type="Texture" id=2]
+[ext_resource path="res://tileset/grasstilecorner.png" type="Texture" id=3]
 
-[sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/tileset.png-781317dbeac795ab5fa88723bddea64c.stex"
-
-[sub_resource type="NavigationPolygon" id=2]
+[sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 ) ]
 
 [node name="tileset" type="Node2D"]
 
-[node name="red" type="Sprite" parent="."]
-position = Vector2( 320, 128 )
-texture = SubResource( 1 )
+[node name="target_path" type="Sprite" parent="."]
+position = Vector2( 128, 128 )
+texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 128, 0, 128, 128 )
+region_rect = Rect2( 0, 0, 128, 128 )
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="red"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="target_path"]
 position = Vector2( -64, -64 )
-navpoly = SubResource( 2 )
+navpoly = SubResource( 1 )
 
 [node name="grass_top_left" type="Sprite" parent="."]
 position = Vector2( 128, 320 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 128, 128 )
 
 [node name="grass_top_center" type="Sprite" parent="."]
 position = Vector2( 320, 320 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 128, 0, 128, 128 )
 
 [node name="grass_top_right" type="Sprite" parent="."]
 position = Vector2( 512, 320 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 256, 0, 128, 128 )
 
 [node name="grass_center_left" type="Sprite" parent="."]
 position = Vector2( 128, 512 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 128, 128, 128 )
 
 [node name="grass_center_center" type="Sprite" parent="."]
 position = Vector2( 320, 512 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 128, 128, 128, 128 )
 
 [node name="grass_center_right" type="Sprite" parent="."]
 position = Vector2( 512, 512 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 256, 128, 128, 128 )
 
 [node name="grass_bottom_left" type="Sprite" parent="."]
 position = Vector2( 128, 704 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 256, 128, 128 )
 
 [node name="grass_bottom_center" type="Sprite" parent="."]
 position = Vector2( 320, 704 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 128, 256, 128, 128 )
 
 [node name="grass_bottom_right" type="Sprite" parent="."]
 position = Vector2( 512, 704 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 256, 256, 128, 128 )
 
 [node name="grass_corner_top_left" type="Sprite" parent="."]
 position = Vector2( 704, 320 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 128, 128 )
 
 [node name="grass_corner_top_right" type="Sprite" parent="."]
 position = Vector2( 896, 320 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 128, 0, 128, 128 )
 
 [node name="grass_corner_bottom_left" type="Sprite" parent="."]
 position = Vector2( 704, 512 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 0, 128, 128, 128 )
 
 [node name="grass_corner_bottom_right" type="Sprite" parent="."]
 position = Vector2( 896, 512 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 128, 128, 128, 128 )
