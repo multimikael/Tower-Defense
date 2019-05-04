@@ -20,7 +20,7 @@ func _on_timer_timeout():
 		for t in targets:
 			if near_pos == null || global_position.distance_to(t.get_global_position()) < global_position.distance_to(near_pos):
 				near_pos = t.get_global_position()
-		var dir_vec = Vector2(near_pos.x - global_position.x, near_pos.y - global_position.y).normalized()
+		var dir_vec = (near_pos-global_position-bullet_offset).normalized()
 		var b = Bullet.instance()
 		b.set_position(b.get_global_position()+bullet_offset)
 		b.set_start_pos(global_position)
